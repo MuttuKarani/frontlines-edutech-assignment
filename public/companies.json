@@ -1,0 +1,402 @@
+[
+  {
+    "id": "1",
+    "name": "Aurora Tech",
+    "location": "Bengaluru, India",
+    "industry": "SaaS",
+    "employees": 120,
+    "website": "https://auroratech.com"
+  },
+  {
+    "id": "2",
+    "name": "Bluefin Analytics",
+    "location": "Pune, India",
+    "industry": "FinTech",
+    "employees": 85,
+    "website": "https://bluefin.com"
+  },
+  {
+    "id": "3",
+    "name": "Cedar Health",
+    "location": "Mumbai, India",
+    "industry": "Health",
+    "employees": 230,
+    "website": "https://cedarhealth.com"
+  },
+  {
+    "id": "4",
+    "name": "Delta Logistics",
+    "location": "Hyderabad, India",
+    "industry": "Logistics",
+    "employees": 60,
+    "website": "https://deltalog.com"
+  },
+  {
+    "id": "5",
+    "name": "Evergreen Foods",
+    "location": "Chennai, India",
+    "industry": "FMCG",
+    "employees": 150,
+    "website": "https://evergreenfoods.com"
+  },
+  {
+    "id": "6",
+    "name": "Fission AI",
+    "location": "Bengaluru, India",
+    "industry": "AI/ML",
+    "employees": 45,
+    "website": "https://fissionai.com"
+  },
+  {
+    "id": "7",
+    "name": "Grove Design",
+    "location": "Kochi, India",
+    "industry": "Design",
+    "employees": 22,
+    "website": "https://grovedesign.com"
+  },
+  {
+    "id": "8",
+    "name": "Helix Energy",
+    "location": "Delhi, India",
+    "industry": "Energy",
+    "employees": 410,
+    "website": "https://helixenergy.com"
+  },
+  {
+    "id": "9",
+    "name": "Ion Robotics",
+    "location": "Bengaluru, India",
+    "industry": "Robotics",
+    "employees": 76,
+    "website": "https://ionrobotics.com"
+  },
+  {
+    "id": "10",
+    "name": "Jade Education",
+    "location": "Ahmedabad, India",
+    "industry": "EdTech",
+    "employees": 39,
+    "website": "https://jadeedu.com"
+  },
+  {
+    "id": "11",
+    "name": "Krypton Security",
+    "location": "Delhi, India",
+    "industry": "Cybersecurity",
+    "employees": 125,
+    "website": "https://kryptonsec.com"
+  },
+  {
+    "id": "12",
+    "name": "Lumos Marketing",
+    "location": "Pune, India",
+    "industry": "Marketing",
+    "employees": 53,
+    "website": "https://lumosmarketing.com"
+  },
+  {
+    "id": "13",
+    "name": "MintPay",
+    "location": "Mumbai, India",
+    "industry": "FinTech",
+    "employees": 98,
+    "website": "https://mintpay.com"
+  },
+  {
+    "id": "14",
+    "name": "Nova Labs",
+    "location": "Hyderabad, India",
+    "industry": "Biotech",
+    "employees": 140,
+    "website": "https://novalabs.com"
+  },
+  {
+    "id": "15",
+    "name": "Omni Retail",
+    "location": "Chennai, India",
+    "industry": "Retail",
+    "employees": 200,
+    "website": "https://omniretail.com"
+  },
+  {
+    "id": "16",
+    "name": "Prime Motors",
+    "location": "Delhi, India",
+    "industry": "Automotive",
+    "employees": 320,
+    "website": "https://primemotors.com"
+  },
+  {
+    "id": "17",
+    "name": "Quantum Dynamics",
+    "location": "Bengaluru, India",
+    "industry": "Research",
+    "employees": 70,
+    "website": "https://quantumdynamics.com"
+  },
+  {
+    "id": "18",
+    "name": "RidgeSoft",
+    "location": "Pune, India",
+    "industry": "Software",
+    "employees": 145,
+    "website": "https://ridgesoft.com"
+  },
+  {
+    "id": "19",
+    "name": "Solarix Power",
+    "location": "Jaipur, India",
+    "industry": "Energy",
+    "employees": 260,
+    "website": "https://solarixpower.com"
+  },
+  {
+    "id": "20",
+    "name": "TechBridge",
+    "location": "Kolkata, India",
+    "industry": "IT Services",
+    "employees": 175,
+    "website": "https://techbridge.com"
+  },
+  {
+    "id": "21",
+    "name": "Urban Homes",
+    "location": "Mumbai, India",
+    "industry": "Real Estate",
+    "employees": 340,
+    "website": "https://urbanhomes.com"
+  },
+  {
+    "id": "22",
+    "name": "Vantage Finance",
+    "location": "Delhi, India",
+    "industry": "FinTech",
+    "employees": 200,
+    "website": "https://vantagefinance.com"
+  },
+  {
+    "id": "23",
+    "name": "Wave Communications",
+    "location": "Chennai, India",
+    "industry": "Telecom",
+    "employees": 410,
+    "website": "https://wavecomms.com"
+  },
+  {
+    "id": "24",
+    "name": "Xenon Electronics",
+    "location": "Pune, India",
+    "industry": "Electronics",
+    "employees": 500,
+    "website": "https://xenonelec.com"
+  },
+  {
+    "id": "25",
+    "name": "YellowBrick Studios",
+    "location": "Kochi, India",
+    "industry": "Media",
+    "employees": 65,
+    "website": "https://yellowbrickstudios.com"
+  },
+  {
+    "id": "26",
+    "name": "Zenith Foods",
+    "location": "Ahmedabad, India",
+    "industry": "FMCG",
+    "employees": 290,
+    "website": "https://zenithfoods.com"
+  },
+  {
+    "id": "27",
+    "name": "Apex Digital",
+    "location": "Bengaluru, India",
+    "industry": "IT Services",
+    "employees": 180,
+    "website": "https://apexdigital.com"
+  },
+  {
+    "id": "28",
+    "name": "BrightPath Logistics",
+    "location": "Hyderabad, India",
+    "industry": "Logistics",
+    "employees": 87,
+    "website": "https://brightpathlogistics.com"
+  },
+  {
+    "id": "29",
+    "name": "Cobalt Mining",
+    "location": "Ranchi, India",
+    "industry": "Mining",
+    "employees": 600,
+    "website": "https://cobaltmining.com"
+  },
+  {
+    "id": "30",
+    "name": "DigiWave Media",
+    "location": "Delhi, India",
+    "industry": "Media",
+    "employees": 55,
+    "website": "https://digiwave.com"
+  },
+  {
+    "id": "31",
+    "name": "EcoSense",
+    "location": "Pune, India",
+    "industry": "Environmental",
+    "employees": 75,
+    "website": "https://ecosense.com"
+  },
+  {
+    "id": "32",
+    "name": "Fusion Retail",
+    "location": "Mumbai, India",
+    "industry": "Retail",
+    "employees": 350,
+    "website": "https://fusionretail.com"
+  },
+  {
+    "id": "33",
+    "name": "Glide Mobility",
+    "location": "Delhi, India",
+    "industry": "Automotive",
+    "employees": 210,
+    "website": "https://glidemobility.com"
+  },
+  {
+    "id": "34",
+    "name": "Horizon Travels",
+    "location": "Bengaluru, India",
+    "industry": "Travel",
+    "employees": 95,
+    "website": "https://horizontravels.com"
+  },
+  {
+    "id": "35",
+    "name": "Insight Research",
+    "location": "Kolkata, India",
+    "industry": "Research",
+    "employees": 60,
+    "website": "https://insightresearch.com"
+  },
+  {
+    "id": "36",
+    "name": "JetStream Airlines",
+    "location": "Delhi, India",
+    "industry": "Aviation",
+    "employees": 800,
+    "website": "https://jetstreamairlines.com"
+  },
+  {
+    "id": "37",
+    "name": "Kudos HR",
+    "location": "Hyderabad, India",
+    "industry": "HR Services",
+    "employees": 44,
+    "website": "https://kudoshr.com"
+  },
+  {
+    "id": "38",
+    "name": "LavaSoft Systems",
+    "location": "Bengaluru, India",
+    "industry": "Software",
+    "employees": 210,
+    "website": "https://lavasoftsystems.com"
+  },
+  {
+    "id": "39",
+    "name": "Metro Hospitals",
+    "location": "Mumbai, India",
+    "industry": "Health",
+    "employees": 1200,
+    "website": "https://metrohospitals.com"
+  },
+  {
+    "id": "40",
+    "name": "Nimbus Cloud",
+    "location": "Pune, India",
+    "industry": "Cloud Services",
+    "employees": 150,
+    "website": "https://nimbuscloud.com"
+  },
+  {
+    "id": "41",
+    "name": "OpenTrack Railways",
+    "location": "Chennai, India",
+    "industry": "Transport",
+    "employees": 640,
+    "website": "https://opentrack.com"
+  },
+  {
+    "id": "42",
+    "name": "Pulse Music",
+    "location": "Kochi, India",
+    "industry": "Entertainment",
+    "employees": 38,
+    "website": "https://pulsemusic.com"
+  },
+  {
+    "id": "43",
+    "name": "QuickShip Courier",
+    "location": "Delhi, India",
+    "industry": "Logistics",
+    "employees": 120,
+    "website": "https://quickship.com"
+  },
+  {
+    "id": "44",
+    "name": "RedStone Construction",
+    "location": "Pune, India",
+    "industry": "Construction",
+    "employees": 480,
+    "website": "https://redstoneconstruction.com"
+  },
+  {
+    "id": "45",
+    "name": "Skyline Hotels",
+    "location": "Mumbai, India",
+    "industry": "Hospitality",
+    "employees": 520,
+    "website": "https://skylinehotels.com"
+  },
+  {
+    "id": "46",
+    "name": "TrioSoft Technologies",
+    "location": "Hyderabad, India",
+    "industry": "Software",
+    "employees": 165,
+    "website": "https://triosoft.com"
+  },
+  {
+    "id": "47",
+    "name": "Unity Fashion",
+    "location": "Delhi, India",
+    "industry": "Fashion",
+    "employees": 90,
+    "website": "https://unityfashion.com"
+  },
+  {
+    "id": "48",
+    "name": "VeloSport Fitness",
+    "location": "Bengaluru, India",
+    "industry": "Fitness",
+    "employees": 110,
+    "website": "https://velosport.com"
+  },
+  {
+    "id": "49",
+    "name": "Windspire Energy",
+    "location": "Chennai, India",
+    "industry": "Energy",
+    "employees": 390,
+    "website": "https://windspireenergy.com"
+  },
+  {
+    "id": "50",
+    "name": "ZenWork Solutions",
+    "location": "Pune, India",
+    "industry": "Consulting",
+    "employees": 77,
+    "website": "https://zenworksolutions.com"
+  }
+]

@@ -1,0 +1,39 @@
+// Theme Colors
+$primary: #3b82f6;
+$secondary: #4ade80;
+$success: #3ddc84;
+$danger: #ff4b6e;
+$warning: #ffbf66;
+$info: #7ad1ff;
+
+$light: #f8f9fa;
+$dark: #12101e;
+
+// Body
+$body-bg: #f8f6f3;
+$body-color: #1a1a1a;
+
+// Typography
+$font-family-base: "Inter", "Segoe UI", sans-serif;
+$headings-color: #202020;
+
+// Card
+$card-bg: #ffffff;
+$card-border-radius: 12px;
+
+// Table
+$table-striped-bg: #f3efff;
+$table-hover-bg: #ebe5ff;
+
+// Pagination
+$pagination-color: $primary;
+$pagination-hover-color: darken($primary, 10%);
+$pagination-active-bg: $primary;
+$pagination-active-border-color: $primary;
+
+// Links
+$link-color: $primary;
+$link-hover-color: darken($primary, 10%);
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";

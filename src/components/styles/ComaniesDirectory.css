@@ -1,0 +1,28 @@
+.card-shadow {
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.search-box:focus,
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.35);
+}
+
+.placeholder {
+  background-color: #dcd7ff !important;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.pagination .page-link {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #ebe5ff !important;
+}
