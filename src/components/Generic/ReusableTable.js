@@ -1,5 +1,4 @@
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
-import "../../styles/ReusableTable.css";
 
 const ReusableTable = ({ data, columns, sortKey, sortDir, onSort }) => {
   return (
