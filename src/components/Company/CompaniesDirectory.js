@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 import ReusableTable from "../Generic/ReusableTable";
-import "../styles/ComaniesDirectory.css";
+import "../../styles/CompaniesDirectory.css";
 
 const CompaniesDirectory = () => {
   const [companies, setCompanies] = useState([]);
@@ -97,14 +97,18 @@ const CompaniesDirectory = () => {
   // Skeleton loader
   if (loading)
     return (
-      <div className="card p-4 shadow-sm card-shadow">
-        <h4 className="placeholder-glow">
-          <span className="placeholder col-6 bg-primary"></span>
-        </h4>
-        <div className="placeholder-glow">
-          <span className="placeholder col-12 mb-2"></span>
-          <span className="placeholder col-12 mb-2"></span>
-          <span className="placeholder col-12 mb-2"></span>
+      <div>
+        <h2 className="mb-3 text-primary fw-bold">Companies Directory</h2>
+
+        <div className="card p-4 shadow-sm card-shadow">
+          <h4 className="placeholder-glow">
+            <span className="placeholder col-6 bg-primary"></span>
+          </h4>
+          <div className="placeholder-glow">
+            <span className="placeholder col-12 mb-2"></span>
+            <span className="placeholder col-12 mb-2"></span>
+            <span className="placeholder col-12 mb-2"></span>
+          </div>
         </div>
       </div>
     );
@@ -135,119 +139,121 @@ const CompaniesDirectory = () => {
   ];
 
   return (
-    <div className="card p-3 shadow-sm card-shadow">
-      {/* ------------------------ */}
-      {/* ❇️ RESPONSIVE FILTERS */}
-      {/* ------------------------ */}
-      <div className="row g-3 mb-3">
-        {/* SEARCH */}
-        <div className="col-12 col-sm-6 col-md-4">
-          <div className="input-group">
-            <span className="input-group-text text-primary">
-              <FaSearch />
-            </span>
-            <input
-              className="form-control"
-              placeholder="Search Companies..."
-              value={search}
+    <div>
+      {/* PAGE HEADING OUTSIDE CARD */}
+      <h2 className="mb-4 text-primary fw-bold">Companies Directory</h2>
+
+      <div className="card p-3 shadow-sm card-shadow">
+        {/* RESPONSIVE FILTERS */}
+        <div className="row g-3 mb-3">
+          {/* SEARCH */}
+          <div className="col-12 col-sm-6 col-md-4">
+            <div className="input-group">
+              <span className="input-group-text text-primary">
+                <FaSearch />
+              </span>
+              <input
+                className="form-control"
+                placeholder="Search Companies..."
+                value={search}
+                onChange={(e) => {
+                  setPage(1);
+                  setSearch(e.target.value);
+                }}
+              />
+            </div>
+          </div>
+
+          {/* LOCATION FILTER */}
+          <div className="col-12 col-sm-6 col-md-4">
+            <select
+              className="form-select"
+              value={locationFilter}
               onChange={(e) => {
                 setPage(1);
-                setSearch(e.target.value);
+                setLocationFilter(e.target.value);
               }}
-            />
+            >
+              <option value="">All Locations</option>
+              {locations.map((loc) => (
+                <option key={loc}>{loc}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* INDUSTRY FILTER */}
+          <div className="col-12 col-sm-6 col-md-4">
+            <select
+              className="form-select"
+              value={industryFilter}
+              onChange={(e) => {
+                setPage(1);
+                setIndustryFilter(e.target.value);
+              }}
+            >
+              <option value="">All Industries</option>
+              {industries.map((ind) => (
+                <option key={ind}>{ind}</option>
+              ))}
+            </select>
           </div>
         </div>
 
-        {/* LOCATION FILTER */}
-        <div className="col-12 col-sm-6 col-md-4">
-          <select
-            className="form-select"
-            value={locationFilter}
-            onChange={(e) => {
-              setPage(1);
-              setLocationFilter(e.target.value);
-            }}
-          >
-            <option value="">All Locations</option>
-            {locations.map((loc) => (
-              <option key={loc}>{loc}</option>
-            ))}
-          </select>
+        {/* TABLE */}
+        <div className="table-responsive">
+          <ReusableTable
+            data={pageItems}
+            columns={columns}
+            sortKey={sortKey}
+            sortDir={sortDir}
+            onSort={changeSort}
+          />
         </div>
 
-        {/* INDUSTRY FILTER */}
-        <div className="col-12 col-sm-6 col-md-4">
-          <select
-            className="form-select"
-            value={industryFilter}
-            onChange={(e) => {
-              setPage(1);
-              setIndustryFilter(e.target.value);
-            }}
-          >
-            <option value="">All Industries</option>
-            {industries.map((ind) => (
-              <option key={ind}>{ind}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {/* ------------------------ */}
-      {/* ❇️ RESPONSIVE TABLE */}
-      {/* ------------------------ */}
-      <div className="table-responsive">
-        <ReusableTable
-          data={pageItems}
-          columns={columns}
-          sortKey={sortKey}
-          sortDir={sortDir}
-          onSort={changeSort}
-        />
-      </div>
-
-      {/* ------------------------ */}
-      {/* ❇️ RESPONSIVE PAGINATION */}
-      {/* ------------------------ */}
-      <nav>
-        <ul className="pagination justify-content-center mt-3 flex-wrap gap-1">
-          {/* Prev */}
-          <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
-            <button
-              className="page-link text-primary px-3"
-              onClick={() => setPage(page - 1)}
-            >
-              <FaChevronLeft /> <span className="d-none d-sm-inline">Prev</span>
-            </button>
-          </li>
-
-          {/* Page numbers */}
-          {Array.from({ length: totalPages }, (_, i) => (
-            <li
-              key={i}
-              className={`page-item ${page === i + 1 ? "active" : ""}`}
-            >
+        {/* PAGINATION */}
+        <nav>
+          <ul className="pagination justify-content-center mt-3 flex-wrap gap-1">
+            {/* Prev */}
+            <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
               <button
-                className="page-link btn-primary text-dark px-3"
-                onClick={() => setPage(i + 1)}
+                className="page-link text-primary px-3"
+                onClick={() => setPage(page - 1)}
               >
-                {i + 1}
+                <FaChevronLeft />{" "}
+                <span className="d-none d-sm-inline">Prev</span>
               </button>
             </li>
-          ))}
 
-          {/* Next */}
-          <li className={`page-item ${page === totalPages ? "disabled" : ""}`}>
-            <button
-              className="page-link text-primary px-3"
-              onClick={() => setPage(page + 1)}
+            {/* Page numbers */}
+            {Array.from({ length: totalPages }, (_, i) => (
+              <li
+                key={i}
+                className={`page-item ${page === i + 1 ? "active" : ""}`}
+              >
+                <button
+                  className="page-link btn-primary text-dark px-3"
+                  onClick={() => setPage(i + 1)}
+                >
+                  {i + 1}
+                </button>
+              </li>
+            ))}
+
+            {/* Next */}
+            <li
+              className={`page-item ${page === totalPages ? "disabled" : ""}`}
             >
-              <span className="d-none d-sm-inline">Next</span>{" "}
-              <FaChevronRight />
-            </button>
-          </li>
-        </ul>
-      </nav>
+              <button
+                className="page-link text-primary px-3"
+                onClick={() => setPage(page + 1)}
+              >
+                <span className="d-none d-sm-inline">Next</span>{" "}
+                <FaChevronRight />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 };

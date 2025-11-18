@@ -1,23 +1,30 @@
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+import "../../styles/ReusableTable.css";
 
 const ReusableTable = ({ data, columns, sortKey, sortDir, onSort }) => {
   return (
-    <table className="table table-striped table-bordered">
+    <table className="table table-striped table-bordered reusable-table">
       <thead className="table-primary">
         <tr>
           {columns.map((col) => (
             <th
               key={col.key}
               onClick={() => col.sortable && onSort(col.key)}
-              style={{ cursor: col.sortable ? "pointer" : "default" }}
+              className={col.sortable ? "sortable-column" : ""}
             >
-              {col.label}{" "}
-              {sortKey === col.key &&
-                (sortDir === "asc" ? (
-                  <FaArrowUp className="text-secondary" />
-                ) : (
-                  <FaArrowDown className="text-secondary" />
-                ))}
+              <span>
+                {col.label}
+                {/* Sorting Icon */}
+                {sortKey === col.key && (
+                  <>
+                    {sortDir === "asc" ? (
+                      <FaArrowUp className="ms-1 text-primary" />
+                    ) : (
+                      <FaArrowDown className="ms-1 text-primary" />
+                    )}
+                  </>
+                )}
+              </span>
             </th>
           ))}
         </tr>
