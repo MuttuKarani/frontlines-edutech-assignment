@@ -49,6 +49,15 @@
   },
   {
     "id": "7",
+    "name": "Frontlines Edutech",
+    "location": "Hyderabad, India",
+    "industry": "EdTech",
+    "employees": 250,
+    "website": "https://www.frontlinesedutech.com/"
+  },
+
+  {
+    "id": "8",
     "name": "Grove Design",
     "location": "Kochi, India",
     "industry": "Design",
@@ -56,7 +65,7 @@
     "website": "https://grovedesign.com"
   },
   {
-    "id": "8",
+    "id": "9",
     "name": "Helix Energy",
     "location": "Delhi, India",
     "industry": "Energy",
@@ -64,7 +73,7 @@
     "website": "https://helixenergy.com"
   },
   {
-    "id": "9",
+    "id": "10",
     "name": "Ion Robotics",
     "location": "Bengaluru, India",
     "industry": "Robotics",
@@ -72,7 +81,7 @@
     "website": "https://ionrobotics.com"
   },
   {
-    "id": "10",
+    "id": "11",
     "name": "Jade Education",
     "location": "Ahmedabad, India",
     "industry": "EdTech",
@@ -80,7 +89,7 @@
     "website": "https://jadeedu.com"
   },
   {
-    "id": "11",
+    "id": "12",
     "name": "Krypton Security",
     "location": "Delhi, India",
     "industry": "Cybersecurity",
@@ -88,7 +97,7 @@
     "website": "https://kryptonsec.com"
   },
   {
-    "id": "12",
+    "id": "13",
     "name": "Lumos Marketing",
     "location": "Pune, India",
     "industry": "Marketing",
@@ -96,7 +105,7 @@
     "website": "https://lumosmarketing.com"
   },
   {
-    "id": "13",
+    "id": "14",
     "name": "MintPay",
     "location": "Mumbai, India",
     "industry": "FinTech",
@@ -104,7 +113,7 @@
     "website": "https://mintpay.com"
   },
   {
-    "id": "14",
+    "id": "15",
     "name": "Nova Labs",
     "location": "Hyderabad, India",
     "industry": "Biotech",
@@ -112,7 +121,7 @@
     "website": "https://novalabs.com"
   },
   {
-    "id": "15",
+    "id": "16",
     "name": "Omni Retail",
     "location": "Chennai, India",
     "industry": "Retail",
@@ -120,7 +129,7 @@
     "website": "https://omniretail.com"
   },
   {
-    "id": "16",
+    "id": "17",
     "name": "Prime Motors",
     "location": "Delhi, India",
     "industry": "Automotive",
@@ -128,7 +137,7 @@
     "website": "https://primemotors.com"
   },
   {
-    "id": "17",
+    "id": "18",
     "name": "Quantum Dynamics",
     "location": "Bengaluru, India",
     "industry": "Research",
@@ -136,7 +145,7 @@
     "website": "https://quantumdynamics.com"
   },
   {
-    "id": "18",
+    "id": "19",
     "name": "RidgeSoft",
     "location": "Pune, India",
     "industry": "Software",
@@ -144,7 +153,7 @@
     "website": "https://ridgesoft.com"
   },
   {
-    "id": "19",
+    "id": "20",
     "name": "Solarix Power",
     "location": "Jaipur, India",
     "industry": "Energy",
@@ -152,7 +161,7 @@
     "website": "https://solarixpower.com"
   },
   {
-    "id": "20",
+    "id": "21",
     "name": "TechBridge",
     "location": "Kolkata, India",
     "industry": "IT Services",
@@ -160,7 +169,7 @@
     "website": "https://techbridge.com"
   },
   {
-    "id": "21",
+    "id": "22",
     "name": "Urban Homes",
     "location": "Mumbai, India",
     "industry": "Real Estate",
@@ -168,7 +177,7 @@
     "website": "https://urbanhomes.com"
   },
   {
-    "id": "22",
+    "id": "23",
     "name": "Vantage Finance",
     "location": "Delhi, India",
     "industry": "FinTech",
@@ -176,7 +185,7 @@
     "website": "https://vantagefinance.com"
   },
   {
-    "id": "23",
+    "id": "24",
     "name": "Wave Communications",
     "location": "Chennai, India",
     "industry": "Telecom",
@@ -184,7 +193,7 @@
     "website": "https://wavecomms.com"
   },
   {
-    "id": "24",
+    "id": "25",
     "name": "Xenon Electronics",
     "location": "Pune, India",
     "industry": "Electronics",
@@ -192,7 +201,7 @@
     "website": "https://xenonelec.com"
   },
   {
-    "id": "25",
+    "id": "26",
     "name": "YellowBrick Studios",
     "location": "Kochi, India",
     "industry": "Media",
@@ -200,7 +209,7 @@
     "website": "https://yellowbrickstudios.com"
   },
   {
-    "id": "26",
+    "id": "27",
     "name": "Zenith Foods",
     "location": "Ahmedabad, India",
     "industry": "FMCG",
@@ -208,7 +217,7 @@
     "website": "https://zenithfoods.com"
   },
   {
-    "id": "27",
+    "id": "28",
     "name": "Apex Digital",
     "location": "Bengaluru, India",
     "industry": "IT Services",
@@ -216,20 +225,12 @@
     "website": "https://apexdigital.com"
   },
   {
-    "id": "28",
+    "id": "29",
     "name": "BrightPath Logistics",
     "location": "Hyderabad, India",
     "industry": "Logistics",
     "employees": 87,
-    "website": "https://brightpathlogistics.com"
-  },
-  {
-    "id": "29",
-    "name": "Cobalt Mining",
-    "location": "Ranchi, India",
-    "industry": "Mining",
-    "employees": 600,
-    "website": "https://cobaltmining.com"
+    "website": "httpsbrightpathlogistics.com"
   },
   {
     "id": "30",

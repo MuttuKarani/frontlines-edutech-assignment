@@ -10,6 +10,7 @@ import ReusableTable from "../Generic/ReusableTable";
 import "../../styles/CompaniesDirectory.css";
 
 const CompaniesDirectory = () => {
+  //  STATE MANAGEMENT
   const [companies, setCompanies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,7 +31,7 @@ const CompaniesDirectory = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
 
-  // Load data
+  //  FETCH DATA FROM companies.json
   useEffect(() => {
     fetch("/companies.json")
       .then((res) => {
@@ -42,17 +43,17 @@ const CompaniesDirectory = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  // Debounce search
+  //SEARCH DEBOUNCE
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(search), 300);
     return () => clearTimeout(timer);
   }, [search]);
 
-  // Dropdown unique values
+  //  UNIQUE DROPDOWN OPTIONS
   const locations = [...new Set(companies.map((c) => c.location))];
   const industries = [...new Set(companies.map((c) => c.industry))];
 
-  // Filtering
+  //  FILTERING LOGIC
   const filtered = useMemo(() => {
     return companies
       .filter((c) =>
@@ -65,7 +66,7 @@ const CompaniesDirectory = () => {
       .filter((c) => (industryFilter ? c.industry === industryFilter : true));
   }, [companies, debouncedSearch, locationFilter, industryFilter]);
 
-  // Sorting
+  //  SORTING LOGIC
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
       let va = a[sortKey];
@@ -80,11 +81,11 @@ const CompaniesDirectory = () => {
     });
   }, [filtered, sortKey, sortDir]);
 
-  // Pagination
+  //  PAGINATION LOGIC
   const totalPages = Math.ceil(sorted.length / pageSize);
   const pageItems = sorted.slice((page - 1) * pageSize, page * pageSize);
 
-  // Sorting function
+  // UPDATE SORT DIRECTION / KEY
   const changeSort = (key) => {
     if (sortKey === key) {
       setSortDir(sortDir === "asc" ? "desc" : "asc");
@@ -94,7 +95,18 @@ const CompaniesDirectory = () => {
     }
   };
 
-  // Skeleton loader
+  //RESET ALL FILTERS
+  const resetFilters = () => {
+    setSearch("");
+    setDebouncedSearch("");
+    setLocationFilter("");
+    setIndustryFilter("");
+    setSortKey("name");
+    setSortDir("asc");
+    setPage(1);
+  };
+
+  // SKELETON LOADER
   if (loading)
     return (
       <div>
@@ -115,7 +127,7 @@ const CompaniesDirectory = () => {
 
   if (error) return <div className="alert alert-danger">{error}</div>;
 
-  // Table columns
+  // TABLE COLUMN CONFIG
   const columns = [
     { key: "name", label: "Name", sortable: true },
     { key: "industry", label: "Industry", sortable: true },
@@ -140,13 +152,11 @@ const CompaniesDirectory = () => {
 
   return (
     <div>
-      {/* PAGE HEADING OUTSIDE CARD */}
       <h2 className="mb-4 text-primary fw-bold">Companies Directory</h2>
 
       <div className="card p-3 shadow-sm card-shadow">
-        {/* RESPONSIVE FILTERS */}
+        {/* FILTER SECTION */}
         <div className="row g-3 mb-3">
-          {/* SEARCH */}
           <div className="col-12 col-sm-6 col-md-4">
             <div className="input-group">
               <span className="input-group-text text-primary">
@@ -164,7 +174,6 @@ const CompaniesDirectory = () => {
             </div>
           </div>
 
-          {/* LOCATION FILTER */}
           <div className="col-12 col-sm-6 col-md-4">
             <select
               className="form-select"
@@ -181,7 +190,6 @@ const CompaniesDirectory = () => {
             </select>
           </div>
 
-          {/* INDUSTRY FILTER */}
           <div className="col-12 col-sm-6 col-md-4">
             <select
               className="form-select"
@@ -196,6 +204,13 @@ const CompaniesDirectory = () => {
                 <option key={ind}>{ind}</option>
               ))}
             </select>
+          </div>
+
+          {/* RESET BUTTON */}
+          <div className="col-12 text-end">
+            <button className="btn btn-secondary" onClick={resetFilters}>
+              Reset Filters
+            </button>
           </div>
         </div>
 
@@ -213,7 +228,6 @@ const CompaniesDirectory = () => {
         {/* PAGINATION */}
         <nav>
           <ul className="pagination justify-content-center mt-3 flex-wrap gap-1">
-            {/* Prev */}
             <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
               <button
                 className="page-link text-primary px-3"
@@ -224,7 +238,6 @@ const CompaniesDirectory = () => {
               </button>
             </li>
 
-            {/* Page numbers */}
             {Array.from({ length: totalPages }, (_, i) => (
               <li
                 key={i}
@@ -239,7 +252,6 @@ const CompaniesDirectory = () => {
               </li>
             ))}
 
-            {/* Next */}
             <li
               className={`page-item ${page === totalPages ? "disabled" : ""}`}
             >
